@@ -1,8 +1,12 @@
-import { Side } from "./styled"
+import * as S from "./styled"
 
 const SideBar = () => {
     return (
-        <Side>SideBar</Side>
+        <S.Sidebar>
+            <S.Wrapper>
+
+            </S.Wrapper>
+        </S.Sidebar>
     )
 }
 

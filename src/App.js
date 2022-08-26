@@ -13,15 +13,11 @@ function App() {
   console.log(coordinates);
   console.log(weatherData);
 
-  let city = "berlin";
-
-  let lat = coordinates.lat;
-  let lon = coordinates.lon;
+  let city = "paris";
 
   useEffect(() => {
-    dispatch(getCoordinates(city)).then(() => {
-      dispatch(getWeather(lat, lon));
-    })
+    dispatch(getCoordinates(city));
+    dispatch(getWeather());
   }, [])
 
 
