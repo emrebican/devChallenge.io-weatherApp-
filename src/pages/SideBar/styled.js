@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 const Sidebar = styled.div`
-    flex-basis: 24%;
+    flex-basis: 27%;
     height: 100vh;
     background-color: #1E213A;
-    
+    position: relative;
+    min-width: 350px;
 `;
 
 const Wrapper = styled.div`
@@ -19,5 +20,11 @@ const Wrapper = styled.div`
     background-size: 160%;
 `;
 
+const Buttons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 3.5rem;
+`;
 
-export { Sidebar, Wrapper };
+
+export { Sidebar, Wrapper, Buttons };

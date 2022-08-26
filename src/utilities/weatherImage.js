@@ -44,3 +44,5 @@ const weatherImage = (icon) => {
             return Clear;
     }
 }
+
+export default weatherImage;
