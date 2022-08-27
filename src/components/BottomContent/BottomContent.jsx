@@ -1,24 +1,33 @@
-import HighLightedCard from "../HighlightedCard/HighLightedCard";
+import * as S from './styled';
 import { useSelector } from "react-redux";
+
+import HighLightedCard from "../HighlightedCard/HighLightedCard";
 
 const BottomContent = () => {
 
     const weather = useSelector(state => state.weather.weatherData);
     const wind_speed = weather.current?.wind_speed;
     const wind_deg = weather.current?.wind_deg;
+    const humidity = weather.current?.humidity;
 
     console.log(weather);
 
     return (
-        <div>
+        <S.BottomWrapper>
             <HighLightedCard
                 type="wind"
                 title="Wind status"
                 unit="mph"
-                wind_speed={wind_speed}
+                content={wind_speed}
                 wind_deg={wind_deg}
             />
-        </div>
+            <HighLightedCard
+                type="humidity"
+                title="Humidity"
+                unit="%"
+                content={humidity}
+            />
+        </S.BottomWrapper>
     )
 }
 

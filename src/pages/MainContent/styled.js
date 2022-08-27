@@ -11,22 +11,23 @@ const Main = styled.div`
 `;
 
 const Top = styled.div`
-    width: 72%;
-    margin: 0 auto;
+    width: 66%;
+    margin: 2rem auto;
+    margin-bottom: 4rem;
     background-color: red;
-    flex: 1.2;
+    flex: 1;
 `;
 
 const Bottom = styled.div`
-    width: 72%;
+    width: 66%;
     margin: 0 auto;
-    background-color: blue;
-    flex: 2;
+    flex: 1;
 
     h2 {
         font-size: 24px;
         font-weight: 700;
         color: #E7E7EB;
+        margin-bottom: 2rem;
     }
 `;
 

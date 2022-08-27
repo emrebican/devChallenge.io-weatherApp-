@@ -1,12 +1,28 @@
 import * as S from './styled';
+import ProgressBar from '../Progress/ProgressBar';
 import { getWindDirection } from '../../utilities/getWindDirection';
+import { TiLocationArrow } from 'react-icons/ti';
 
-const HighLightedCard = ({ type, title, unit, wind_speed, wind_deg }) => {
+const HighLightedCard = ({ type, title, unit, content, wind_deg }) => {
+
     return (
-        <S.HighWrapper>
-            <h2>{title}</h2>
-            <span>{wind_speed?.toFixed()}{unit}</span>
-            <p>{getWindDirection(wind_deg)}</p>
+        <S.HighWrapper type={type}>
+            <S.Title>{title}</S.Title>
+            <S.Content>
+                <span>{content?.toFixed()}</span>
+                <span>{unit}</span>
+            </S.Content>
+            {type === "wind"
+                ?
+                <S.Direction>
+                    <TiLocationArrow />
+                    {getWindDirection(wind_deg)}
+                </S.Direction>
+                :
+                <S.Direction>
+                    <ProgressBar progress={content} />
+                </S.Direction>
+            }
         </S.HighWrapper>
     )
 }
