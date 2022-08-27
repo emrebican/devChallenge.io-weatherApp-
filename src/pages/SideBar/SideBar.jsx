@@ -32,9 +32,13 @@ const SideBar = () => {
                     {kelvinToC(temp)}
                     <span>°C</span>
                 </h2>
-                <p>{letterCapitalize(weather_description)}</p>
-                <span>Today &#8226; {todayDate()}</span>
-                <article><MdLocationPin /> {locationFormat(location)}</article>
+                <p>
+                    {letterCapitalize(weather_description)}
+                </p>
+                <span>
+                    Today &#8226; {todayDate()}
+                </span>
+                <article><MdLocationPin />{locationFormat(location)}</article>
             </S.BottomWrapper>
         </S.Sidebar>
     )
