@@ -9,6 +9,8 @@ const BottomContent = () => {
     const wind_speed = weather.current?.wind_speed;
     const wind_deg = weather.current?.wind_deg;
     const humidity = weather.current?.humidity;
+    const visibility = weather.current?.visibility / 1000?.toFixed();
+    const pressure = weather.current?.pressure;
 
     console.log(weather);
 
@@ -16,7 +18,7 @@ const BottomContent = () => {
         <S.BottomWrapper>
             <HighLightedCard
                 type="wind"
-                title="Wind status"
+                title="Wind Status"
                 unit="mph"
                 content={wind_speed}
                 wind_deg={wind_deg}
@@ -26,6 +28,16 @@ const BottomContent = () => {
                 title="Humidity"
                 unit="%"
                 content={humidity}
+            />
+            <HighLightedCard
+                title="Visibility"
+                unit="miles"
+                content={visibility}
+            />
+            <HighLightedCard
+                title="Air Pressure"
+                unit="mb"
+                content={pressure}
             />
         </S.BottomWrapper>
     )

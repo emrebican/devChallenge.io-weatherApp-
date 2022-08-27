@@ -7,7 +7,8 @@ const HighWrapper = styled.div`
     justify-content: center;
     gap: 1.4rem;
     width: 428px;
-    height: ${(props => (props.type ? "240px" : "160px"))};
+    height: ${(props => (props.type ? "204px" : "160px"))};
+    margin-top: ${props => props.type ? "" : "3rem"};
     background-color: #1E213A;
 `;
 

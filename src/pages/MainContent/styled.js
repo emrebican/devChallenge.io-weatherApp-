@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Main = styled.div`
     flex-basis: 73%;
-    height: 100%;
+    /* height: 100%; */
     min-height: 100vh;
     position: relative;
     display: flex;
@@ -13,9 +13,9 @@ const Main = styled.div`
 const Top = styled.div`
     width: 66%;
     margin: 2rem auto;
-    margin-bottom: 4rem;
+    margin-bottom: 3.2rem;
     background-color: red;
-    flex: 1;
+    flex: 3;
 `;
 
 const Bottom = styled.div`

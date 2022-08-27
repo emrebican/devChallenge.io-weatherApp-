@@ -19,6 +19,7 @@ const HighLightedCard = ({ type, title, unit, content, wind_deg }) => {
                     {getWindDirection(wind_deg)}
                 </S.Direction>
                 :
+                type === "humidity" &&
                 <S.Direction>
                     <ProgressBar progress={content} />
                 </S.Direction>
