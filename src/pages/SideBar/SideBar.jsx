@@ -1,10 +1,12 @@
 import * as S from "./styled";
 import { useSelector } from "react-redux";
+import { MdLocationPin } from 'react-icons/md';
 
-import weatherImage from "../../utilities/weatherImage";
+import { weatherImage } from "../../utilities/weatherImage";
 import { kelvinToC, kelvinToF } from "../../utilities/tempConvert";
 import { todayDate } from "../../utilities/todayDate";
 import { locationFormat } from "../../utilities/locationFormat";
+import { letterCapitalize } from "../../utilities/letterCapitalize";
 
 import SearchButton from "../../components/SearchButton/SearchButton";
 import LocationButton from "../../components/LocationButton/LocationButton";
@@ -22,15 +24,18 @@ const SideBar = () => {
                 <SearchButton />
                 <LocationButton />
             </S.Buttons>
-            <S.Wrapper>
-                <img src={`/assets/${weatherImage(weather_icon)}`} alt="" />
+            <S.ImageWrapper>
+                <img src={`/assets/${weatherImage(weather_icon)}`} alt={weather_description} />
+            </S.ImageWrapper>
+            <S.BottomWrapper>
                 <h2>
                     {kelvinToC(temp)}
+                    <span>°C</span>
                 </h2>
-                <p>{weather_description}</p>
-                <p>{todayDate()}</p>
-                <p>{locationFormat(location)}</p>
-            </S.Wrapper>
+                <p>{letterCapitalize(weather_description)}</p>
+                <span>Today &#8226; {todayDate()}</span>
+                <article><MdLocationPin /> {locationFormat(location)}</article>
+            </S.BottomWrapper>
         </S.Sidebar>
     )
 }

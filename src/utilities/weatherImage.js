@@ -9,7 +9,7 @@ const Sleet = "Sleet.png";
 const Snow = "Snow.png";
 const ThunderStorm = "ThunderStorm.png";
 
-const weatherImage = (icon) => {
+export const weatherImage = (icon) => {
     switch (icon) {
         case "01d":
         case "01n":
@@ -44,5 +44,3 @@ const weatherImage = (icon) => {
             return Clear;
     }
 }
-
-export default weatherImage;
