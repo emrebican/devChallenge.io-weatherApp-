@@ -4,7 +4,7 @@ import { MdLocationPin } from 'react-icons/md';
 
 import { weatherImage } from "../../utilities/weatherImage";
 import { kelvinToC, kelvinToF } from "../../utilities/tempConvert";
-import { todayDate } from "../../utilities/todayDate";
+import { useDate } from "../../hooks/useDate";
 import { locationFormat } from "../../utilities/locationFormat";
 import { letterCapitalize } from "../../utilities/letterCapitalize";
 
@@ -36,7 +36,7 @@ const SideBar = () => {
                     {letterCapitalize(weather_description)}
                 </p>
                 <span>
-                    Today &#8226; {todayDate()}
+                    Today &#8226; {useDate()}
                 </span>
                 <article><MdLocationPin />{locationFormat(location)}</article>
             </S.BottomWrapper>

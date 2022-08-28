@@ -1,8 +1,13 @@
-import React from 'react'
+import * as S from './styled';
+import { useDate } from '../../hooks/useDate';
 
-const Card = () => {
+const Card = ({ daily }) => {
+    console.log(daily);
     return (
-        <div>Card</div>
+        <S.Card_Wrapper>
+            {/* {useFormatDate(daily?.dt)} */}
+            {useDate(daily?.dt)}
+        </S.Card_Wrapper>
     )
 }
 

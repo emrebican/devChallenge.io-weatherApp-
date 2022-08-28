@@ -14,7 +14,6 @@ const Top = styled.div`
     width: 66%;
     margin: 2rem auto;
     margin-bottom: 3.2rem;
-    background-color: red;
     flex: 3;
 `;
 
