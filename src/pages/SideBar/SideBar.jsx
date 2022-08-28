@@ -25,7 +25,10 @@ const SideBar = () => {
                 <LocationButton />
             </S.Buttons>
             <S.ImageWrapper>
-                <img src={`/assets/${weatherImage(weather_icon)}`} alt={weather_description} />
+                <img
+                    src={`/assets/${weatherImage(weather_icon)}`}
+                    alt={weather_description}
+                />
             </S.ImageWrapper>
             <S.BottomWrapper>
                 <h2>

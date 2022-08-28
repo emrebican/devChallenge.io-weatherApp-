@@ -12,8 +12,8 @@ export const useDate = (date) => {
     const formatted = () => {
 
         const formatDate = date
-            ? format(new Date(date * 1000), "eee d MMM")
-            : format(new Date(), "eee d MMM")
+            ? format(new Date(date * 1000), "eee, d MMM")
+            : format(new Date(), "eee, d MMM")
 
         setDateForm(formatDate);
     }

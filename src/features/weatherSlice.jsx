@@ -20,7 +20,7 @@ export const getCoordinates = createAsyncThunk(
 export const getWeather = createAsyncThunk(
     "weather/getWeather",
     async (lat, lon) => {
-        const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=51.5085&lon=-0.1257&appid=${process.env.REACT_APP_WEATHER_API}&exclude=minutely,hourly&lang=en`);
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&appid=${process.env.REACT_APP_WEATHER_API}&exclude=minutely,hourly&lang=en`);
 
         return response.data;
     }

@@ -6,9 +6,9 @@ const HighWrapper = styled.div`
     align-items: center;
     justify-content: center;
     gap: 1.4rem;
-    width: 428px;
+    /* width: 428px; */
+    width: 48%;
     height: ${(props => (props.type ? "204px" : "160px"))};
-    margin-top: ${props => props.type ? "" : "3rem"};
     background-color: #1E213A;
 `;
 
