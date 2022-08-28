@@ -8,16 +8,17 @@ import { useDate } from "../../hooks/useDate";
 import { locationFormat } from "../../utilities/locationFormat";
 import { letterCapitalize } from "../../utilities/letterCapitalize";
 
-import SearchButton from "../../components/SearchButton/SearchButton";
-import LocationButton from "../../components/LocationButton/LocationButton";
+import SearchButton from "../../components/Buttons/SearchButton/SearchButton";
+import LocationButton from "../../components/Buttons/LocationButton/LocationButton";
 
 const SideBar = () => {
     const weather = useSelector(state => state.weather.weatherData);
+    const type = useSelector(state => state.weather.tempUnits);
     const weather_icon = weather.current?.weather[0].icon;
     const weather_description = weather.current?.weather[0].description;
     const temp = weather.current?.temp;
     const location = weather?.timezone;
-
+    console.log(type);
     return (
         <S.Sidebar>
             <S.Buttons>
@@ -32,8 +33,11 @@ const SideBar = () => {
             </S.ImageWrapper>
             <S.BottomWrapper>
                 <h2>
-                    {kelvinToC(temp)}
-                    <span>°C</span>
+                    {type === "°C"
+                        ? kelvinToC(temp)
+                        : kelvinToF(temp)
+                    }
+                    <span>{type}</span>
                 </h2>
                 <p>
                     {letterCapitalize(weather_description)}

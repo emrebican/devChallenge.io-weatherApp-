@@ -13,7 +13,7 @@ function App() {
   console.log(coordinates);
   console.log(weatherData);
 
-  let city = "berlin";
+  let city = "Istanbul";
 
   useEffect(() => {
     dispatch(getCoordinates(city));

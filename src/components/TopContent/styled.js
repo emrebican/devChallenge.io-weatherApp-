@@ -5,4 +5,5 @@ export const TopWrapper = styled.div`
     display: flex;
     align-items: flex-end;
     gap: 40px;
+    position: relative;
 `;

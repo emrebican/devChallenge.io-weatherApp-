@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Sidebar = styled.div`
   flex-basis: 27%;
-  height: 100%;
+  /* height: 100%; */
   min-height: 100vh;
   position: relative;
   background-color: #1E213A;

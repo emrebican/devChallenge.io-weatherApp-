@@ -1,11 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import * as Constant from '../constants/constants';
 
 // InitialState
 const initialState = {
     coordinates: [],
     weatherData: [],
     loading: false,
+    tempUnits: Constant.TEMPRATURE_UNITS.celcius,
 }
 
 export const getCoordinates = createAsyncThunk(
@@ -20,7 +22,7 @@ export const getCoordinates = createAsyncThunk(
 export const getWeather = createAsyncThunk(
     "weather/getWeather",
     async (lat, lon) => {
-        const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=52.5244&lon=13.4105&appid=${process.env.REACT_APP_WEATHER_API}&exclude=minutely,hourly&lang=en`);
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=41.0351&lon=28.9833&appid=${process.env.REACT_APP_WEATHER_API}&exclude=minutely,hourly&lang=en`);
 
         return response.data;
     }
@@ -29,7 +31,11 @@ export const getWeather = createAsyncThunk(
 const weatherSlice = createSlice({
     name: "weather",
     initialState,
-    reducers: {},
+    reducers: {
+        tempUnitChange: (state, action) => {
+            state.tempUnits = action.payload;
+        }
+    },
     extraReducers: {
         [getCoordinates.pending]: (state) => {
             state.loading = true;
@@ -55,5 +61,5 @@ const weatherSlice = createSlice({
     }
 });
 
-// export const {} = weatherSlice.actions;
+export const { tempUnitChange } = weatherSlice.actions;
 export default weatherSlice.reducer;
