@@ -15,10 +15,14 @@ const Title = styled.p`
     font-size: 16px;
     font-weight: 500;
     color: #E7E7EB;
+
+    span{
+        display: ${(props) => props.type ? "none" : "block"}
+    }
 `;
 
 const ImageWrapper = styled.img`
-    height: 62px;
+    height: 72px;
     object-fit: cover;
     object-position: center;
     margin-top: -1.5rem;

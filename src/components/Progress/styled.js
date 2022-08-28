@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+`;
 
 const Progress = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 230px;
+    width: 300px;
 `;
 
 const Line = styled.div`
@@ -18,7 +19,7 @@ const Line = styled.div`
 
 const ProgressBar = styled.div`
     position: relative;
-    height: 8px;
+    height: 10px;
     background-color: #E7E7EB;
     border-radius: 10px;
 

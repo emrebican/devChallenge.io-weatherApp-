@@ -4,13 +4,18 @@ import { useSelector } from 'react-redux';
 import { weatherImage } from '../../utilities/weatherImage';
 import { kelvinToC, kelvinToF } from '../../utilities/tempConvert';
 
-const Card = ({ daily }) => {
+const Card = ({ daily, index }) => {
     const tempUnit = useSelector(state => state.weather.tempUnits);
 
     return (
         <S.Card_Wrapper>
-            <S.Title>
-                {useDate(daily?.dt)}
+            <S.Title type={index === 0 ? true : false}>
+                {index === 0
+                    && "Tomorrow"
+                }
+                <span>
+                    {useDate(daily?.dt)}
+                </span>
             </S.Title>
             <S.ImageWrapper
                 src={`/assets/${weatherImage(daily?.weather[0].icon)}`}

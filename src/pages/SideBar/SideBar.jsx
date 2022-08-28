@@ -2,9 +2,9 @@ import * as S from "./styled";
 import { useSelector } from "react-redux";
 import { MdLocationPin } from 'react-icons/md';
 
+import { useDate } from "../../hooks/useDate";
 import { weatherImage } from "../../utilities/weatherImage";
 import { kelvinToC, kelvinToF } from "../../utilities/tempConvert";
-import { useDate } from "../../hooks/useDate";
 import { locationFormat } from "../../utilities/locationFormat";
 import { letterCapitalize } from "../../utilities/letterCapitalize";
 
@@ -18,7 +18,7 @@ const SideBar = () => {
     const weather_description = weather.current?.weather[0].description;
     const temp = weather.current?.temp;
     const location = weather?.timezone;
-    console.log(type);
+
     return (
         <S.Sidebar>
             <S.Buttons>

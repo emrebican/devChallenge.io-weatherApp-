@@ -14,6 +14,7 @@ const TopContent = () => {
                 [...Array(5)].map((w, index) => (
                     <Card
                         key={index}
+                        index={index}
                         daily={daily_weather[index + 1]}
                     />
                 ))
