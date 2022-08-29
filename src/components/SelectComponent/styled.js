@@ -13,6 +13,7 @@ const Select = styled.select`
     font-family: 'Raleway';
     background-color: transparent;
     color: #616475;
+    cursor: pointer;
 `;
 
 const Option = styled.option`

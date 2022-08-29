@@ -11,7 +11,7 @@ const Card_Wrapper = styled.div`
     background-color: #1E213A;
 `;
 
-const Title = styled.p`
+const Title = styled.span`
     font-size: 16px;
     font-weight: 500;
     color: #E7E7EB;
