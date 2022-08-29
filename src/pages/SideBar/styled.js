@@ -7,6 +7,7 @@ const Sidebar = styled.div`
   position: relative;
   background-color: #1E213A;
   min-width: 350px;
+  display: ${(props) => props.slider ? "none" : "block"}
 `;
 
 const ImageWrapper = styled.div`

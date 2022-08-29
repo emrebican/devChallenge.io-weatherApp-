@@ -5,7 +5,6 @@ import TempButtons from "../Buttons/TempButtons/TempButtons";
 
 const TopContent = () => {
     const daily_weather = useSelector(state => state.weather.weatherData.daily);
-    console.log("adasd", daily_weather);
 
     return (
         <TopWrapper>

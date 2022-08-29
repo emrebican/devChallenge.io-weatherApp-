@@ -6,6 +6,8 @@ const SearchBar_Wrapper = styled.div`
     flex-basis: 27%;
     min-height: 100vh;
     background-color: #1E213A;
+    display: ${(props) => (props.slider ? "block" : "none")};
+    transition: all ease .5s;
 `;
 
 const Cancel = styled.div`
@@ -74,13 +76,22 @@ const Input_Wrapper = styled.div`
     }
 `;
 
-const Select = styled.select`
-    width: 380px;
-    height: 64px;
-    outline: none;
-    border: 1px solid #616475;
+const CityBtn = styled.button`
+    border: none;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Raleway';
+    letter-spacing: 1.5px;
+    margin: 3rem 0 2rem 5rem;
+    color: #E7E7EB;
     background-color: transparent;
-    color: #616475;
+    cursor: pointer;
+
+    &:hover{
+        color: #616475;
+    }
 `;
 
-export { SearchBar_Wrapper, Cancel, Form, Input_Wrapper, Button, Select };
+
+export { SearchBar_Wrapper, Cancel, Form, Input_Wrapper, Button, CityBtn };

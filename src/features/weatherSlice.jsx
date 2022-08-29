@@ -8,8 +8,9 @@ const initialState = {
     weatherData: [],
     loading: false,
     tempUnits: Constant.TEMPRATURE_UNITS.celcius,
-
-    // searchQuery will be added
+    slider: false,
+    searchQuery: "",
+    locations:[],
 }
 
 export const getCoordinates = createAsyncThunk(
@@ -24,7 +25,7 @@ export const getCoordinates = createAsyncThunk(
 export const getWeather = createAsyncThunk(
     "weather/getWeather",
     async (lat, lon) => {
-        console.log("slice",lat, lon);
+        console.log("slice", lat, lon);
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=41.0351&lon=28.9833&appid=${process.env.REACT_APP_WEATHER_API}&exclude=minutely,hourly&lang=en`);
 
         return response.data;
@@ -37,6 +38,15 @@ const weatherSlice = createSlice({
     reducers: {
         tempUnitChange: (state, action) => {
             state.tempUnits = action.payload;
+        },
+        setSlider: (state, action) => {
+            state.slider = action.payload;
+        },
+        setSearchQuery: (state, action) => {
+            state.searchQuery = action.payload;
+        },
+        addLocation:(state, action) => {
+            state.locations.unshift(action.payload)
         }
     },
     extraReducers: {
@@ -64,5 +74,5 @@ const weatherSlice = createSlice({
     }
 });
 
-export const { tempUnitChange } = weatherSlice.actions;
+export const { tempUnitChange, setSlider, setSearchQuery, addLocation } = weatherSlice.actions;
 export default weatherSlice.reducer;

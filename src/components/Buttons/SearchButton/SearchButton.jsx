@@ -1,15 +1,12 @@
 import * as S from './styled';
-import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux/es/exports';
+import { setSlider } from '../../../features/weatherSlice';
 
 const SearchButton = () => {
-    let navigate = useNavigate();
-
-    const handleNavigate = () => {
-        navigate('/search')
-    }
+    const dispatch = useDispatch();
 
     return (
-        <S.Wrapper onClick={handleNavigate}>
+        <S.Wrapper onClick={() => dispatch(setSlider(true))}>
             Search for Places
         </S.Wrapper>
     )

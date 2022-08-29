@@ -8,7 +8,7 @@ const HighWrapper = styled.div`
     gap: 1.4rem;
     /* width: 428px; */
     width: 48%;
-    height: ${(props => (props.type ? "204px" : "160px"))};
+    height: ${(props) => (props.type ? "204px" : "160px")};
     background-color: #1E213A;
 `;
 
