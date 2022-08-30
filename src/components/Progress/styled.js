@@ -19,9 +19,6 @@ const Progress = styled.div`
     @media (max-width: 1200px) {
         width: 300px;
     }
-    @media (max-width: 500px) {
-        width: 300px;
-    }
 `;
 
 const Line = styled.div`

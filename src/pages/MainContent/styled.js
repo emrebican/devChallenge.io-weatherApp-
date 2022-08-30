@@ -34,12 +34,8 @@ const Bottom = styled.div`
     }
 
     @media (max-width: 1200px) {
-            width: 80%;
-        }
-
-    @media (max-width: 500px) {
-            width: 80%;
-        }
+        width: 80%;
+    }
 `;
 
 export { Main, Top, Bottom };

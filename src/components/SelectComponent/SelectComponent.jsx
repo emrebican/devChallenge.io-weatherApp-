@@ -6,7 +6,7 @@ import { MdKeyboardArrowRight } from 'react-icons/md';
 const SelectComponent = ({ input, handleChange }) => {
     const locations = useSelector(state => state.weather.locations);
     console.log("loc", locations);
-
+    
     const selectLocations = [...new Set(locations)].slice(0, 5).map((loc, index) => (
         <S.Option
             key={index}

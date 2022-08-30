@@ -80,6 +80,10 @@ const Buttons = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 2.5rem 3.5rem;
+
+  @media (max-width: 1200px) {
+    padding: 18px 12px;
+  }
 `;
 
 

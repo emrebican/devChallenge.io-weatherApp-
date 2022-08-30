@@ -18,6 +18,11 @@ const Cancel = styled.div`
     font-size: 25px;
     cursor: pointer;
     color: #E7E7EB;
+
+    @media (max-width: 1200px) {
+        top: 18px;
+        right: 18px; 
+    }
 `;
 
 const Form = styled.form`
@@ -26,6 +31,10 @@ const Form = styled.form`
     gap: 15px;
     width: 75%;
     margin: 82px auto;
+
+    @media (max-width: 1200px) {
+        width: 90%;
+    }
 `;
 
 const Button = styled.button`
@@ -75,6 +84,10 @@ const Input_Wrapper = styled.div`
         color: #616475;
         font-family: 'Raleway';
     }
+
+    @media (max-width: 1200px) {
+        width: 100%;
+    }
 `;
 
 const CityBtn = styled.button`
@@ -91,6 +104,10 @@ const CityBtn = styled.button`
 
     &:hover{
         color: #616475;
+    }
+
+    @media (max-width: 1200px) {
+        margin: 3rem 2rem;
     }
 `;
 

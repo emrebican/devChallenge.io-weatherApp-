@@ -15,6 +15,10 @@ const Select = styled.select`
     background-color: transparent;
     color: #616475;
     cursor: pointer;
+
+    @media (max-width: 1200px) {
+        width: 90%;
+    }
 `;
 
 const Option = styled.option`

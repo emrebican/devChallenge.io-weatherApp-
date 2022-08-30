@@ -10,10 +10,6 @@ const Card_Wrapper = styled.div`
     height: 177px;
     background-color: #1E213A;
 
-    @media (max-width: 500px) {
-        width: 120px;
-    }
-
     @media (max-width: 1200px) {
         width: 120px;
     }
@@ -33,10 +29,6 @@ const Title = styled.span`
     }
 
     @media (max-width: 1200px) {
-        font-size: 16px;
-    }
-
-    @media (max-width: 500px) {
         font-size: 16px;
     }
 `;
@@ -68,11 +60,6 @@ const Temps = styled.div`
     }
 
     @media (max-width: 1200px) {
-        flex-direction: row;
-        gap: 1rem;
-    }
-
-    @media (max-width: 500px) {
         flex-direction: row;
         gap: 1rem;
     }
