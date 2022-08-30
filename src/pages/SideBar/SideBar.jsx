@@ -14,14 +14,14 @@ import LocationButton from "../../components/Buttons/LocationButton/LocationButt
 const SideBar = () => {
     const weather = useSelector(state => state.weather.weatherData);
     const type = useSelector(state => state.weather.tempUnits);
-    const slider = useSelector(state => state.weather.slider);
+    const searchbarVisible = useSelector(state => state.weather.searchbarVisible);
     const weather_icon = weather.current?.weather[0].icon;
     const weather_description = weather.current?.weather[0].description;
     const temp = weather.current?.temp;
     const location = weather?.timezone;
 
     return (
-        <S.Sidebar slider={slider ? true : false}>
+        <S.Sidebar searchbarVisible={searchbarVisible ? true : false}>
             <S.Buttons>
                 <SearchButton />
                 <LocationButton />

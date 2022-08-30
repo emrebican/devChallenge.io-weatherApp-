@@ -9,6 +9,14 @@ const Card_Wrapper = styled.div`
     width: 100%;
     height: 177px;
     background-color: #1E213A;
+
+    @media (max-width: 500px) {
+        width: 120px;
+    }
+
+    @media (max-width: 1200px) {
+        width: 120px;
+    }
 `;
 
 const Title = styled.span`
@@ -18,6 +26,18 @@ const Title = styled.span`
 
     span{
         display: ${(props) => props.type ? "none" : "block"}
+    }
+
+    @media (max-width: 1300px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 16px;
     }
 `;
 
@@ -40,6 +60,21 @@ const Temps = styled.div`
         &:nth-child(2n) {
             color: #A09FB1;
         }
+    }
+
+    @media (max-width: 1350px) {
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    @media (max-width: 1200px) {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    @media (max-width: 500px) {
+        flex-direction: row;
+        gap: 1rem;
     }
 `;
 

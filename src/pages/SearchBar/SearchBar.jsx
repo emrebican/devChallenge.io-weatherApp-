@@ -1,7 +1,7 @@
 import * as S from './styled';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getCoordinates, getWeather, setSearchQuery, addLocation, setSlider } from '../../features/weatherSlice';
+import { getCoordinates, getWeather, setSearchQuery, addLocation, setVisible } from '../../features/weatherSlice';
 
 import SelectComponent from '../../components/SelectComponent/SelectComponent';
 import { FaTimes } from 'react-icons/fa';
@@ -10,7 +10,7 @@ import { MdOutlineSearch } from 'react-icons/md';
 const SearchBar = () => {
     const dispatch = useDispatch();
     const searchQuery = useSelector(state => state.weather.searchQuery);
-    const slider = useSelector(state => state.weather.slider);
+    const searchbarVisible = useSelector(state => state.weather.searchbarVisible);
     const coordinates = useSelector(state => state.weather.coordinates);
     const [input, setInput] = useState("");
 
@@ -20,6 +20,7 @@ const SearchBar = () => {
     let lon = coordinates?.lon;
 
     useEffect(() => {
+        // Need to be fixed**********************************************************************
         dispatch(getCoordinates(searchQuery ? searchQuery : "Istanbul")).then(() => {
             dispatch(getWeather(lat, lon));
         })
@@ -39,9 +40,9 @@ const SearchBar = () => {
     }
 
     return (
-        <S.SearchBar_Wrapper slider={slider ? true : false}>
+        <S.SearchBar_Wrapper searchbarVisible={searchbarVisible ? true : false}>
             <S.Cancel>
-                <FaTimes onClick={() => dispatch(setSlider(false))} />
+                <FaTimes onClick={() => dispatch(setVisible(false))} />
             </S.Cancel>
             <S.Form onSubmit={handleSubmit}>
                 <S.Input_Wrapper>

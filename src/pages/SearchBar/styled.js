@@ -5,8 +5,9 @@ const SearchBar_Wrapper = styled.div`
     text-align: center;
     flex-basis: 27%;
     min-height: 100vh;
+    min-width: 350px;
     background-color: #1E213A;
-    display: ${(props) => (props.slider ? "block" : "none")};
+    display: ${(props) => (props.searchbarVisible ? "block" : "none")};
     transition: all ease .5s;
 `;
 

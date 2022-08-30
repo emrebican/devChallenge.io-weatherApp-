@@ -8,6 +8,20 @@ const Progress = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 300px;
+    transition: all ease .4s;
+
+    @media (max-width: 1680px) {
+        width: 250px;
+    }
+    @media (max-width: 1350px) {
+        width: 200px;
+    }
+    @media (max-width: 1200px) {
+        width: 300px;
+    }
+    @media (max-width: 500px) {
+        width: 300px;
+    }
 `;
 
 const Line = styled.div`

@@ -10,6 +10,15 @@ const HighWrapper = styled.div`
     width: 48%;
     height: ${(props) => (props.type ? "204px" : "160px")};
     background-color: #1E213A;
+
+    @media (max-width: 1680px) {
+        max-width: 47%;
+    }
+
+    @media (max-width: 1200px) {
+        max-width: 100%;
+        width: 100%;
+    }
 `;
 
 const Title = styled.div`

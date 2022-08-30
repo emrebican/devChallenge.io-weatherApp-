@@ -1,7 +1,7 @@
 import * as S from './styled';
 import { useSelector } from 'react-redux';
 import { letterCapitalize } from '../../utilities/letterCapitalize';
-
+import { MdKeyboardArrowRight } from 'react-icons/md';
 
 const SelectComponent = ({ input, handleChange }) => {
     const locations = useSelector(state => state.weather.locations);

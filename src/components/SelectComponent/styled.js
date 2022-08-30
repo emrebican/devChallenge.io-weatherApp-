@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const Select = styled.select`
-    width: 380px;
+    /* width: 380px; */
+    width: 75%;
     height: 64px;
     margin: 2rem 0;
     margin-top: -1rem;

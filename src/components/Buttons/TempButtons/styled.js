@@ -6,6 +6,11 @@ const Buttons_Wrapper = styled.div`
     right: 0;
     display: flex;
     gap: 1rem;
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        right: -40px;
+    }
 `;
 
 const Button = styled.button`

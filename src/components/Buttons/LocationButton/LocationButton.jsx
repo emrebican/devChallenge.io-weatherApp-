@@ -1,12 +1,18 @@
-import { BiCurrentLocation } from 'react-icons/bi';
 import * as S from './styled';
+import { useDispatch } from 'react-redux';
+import { getWeather } from '../../../features/weatherSlice';
+import { BiCurrentLocation } from 'react-icons/bi';
 
 const LocationButton = () => {
-
+    const dispatch = useDispatch();
+    
     const getPosition = () => {
         navigator.geolocation.getCurrentPosition((position) => {
-            console.log("lati: ", position.coords.latitude);
-            console.log("long: ", position.coords.longitude);
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            console.log("lati: ", lat);
+            console.log("long: ", lon);
+            dispatch(getWeather(lat, lon))
         })
     }
 

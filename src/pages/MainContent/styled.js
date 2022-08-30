@@ -27,7 +27,19 @@ const Bottom = styled.div`
         font-weight: 700;
         color: #E7E7EB;
         margin-bottom: 2rem;
+
+        @media (max-width: 500px) {
+            text-align: center;
+        }
     }
+
+    @media (max-width: 1200px) {
+            width: 80%;
+        }
+
+    @media (max-width: 500px) {
+            width: 80%;
+        }
 `;
 
 export { Main, Top, Bottom };
