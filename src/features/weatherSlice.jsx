@@ -9,10 +9,11 @@ const initialState = {
     loading: false,
     tempUnits: Constant.TEMPRATURE_UNITS.celcius,
     searchbarVisible: false,
-    searchQuery: "",
+    searchQuery: Constant.DEFAULT_CITY,
     locations: [],
 }
 
+// Coordinates
 export const getCoordinates = createAsyncThunk(
     "weather/getCoordinates",
     async (city) => {
@@ -22,13 +23,11 @@ export const getCoordinates = createAsyncThunk(
     }
 )
 
-// Need to be fixed**********************************************************************
+// WeatherData
 export const getWeather = createAsyncThunk(
     "weather/getWeather",
-    async (lat, lon) => {
-        console.log("slice", lat, lon);
-
-        const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=48.8534&lon=2.3488&appid=${process.env.REACT_APP_WEATHER_API}&exclude=minutely,hourly&lang=en`);
+    async ({ lat, lon }) => {
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER_API}&exclude=minutely,hourly&lang=en`);
 
         return response.data;
     }

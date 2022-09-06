@@ -12,8 +12,6 @@ const BottomContent = () => {
     const visibility = weather.current?.visibility / 1000?.toFixed();
     const pressure = weather.current?.pressure;
 
-    console.log(weather);
-
     return (
         <S.BottomWrapper>
             <HighLightedCard

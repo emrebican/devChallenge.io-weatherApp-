@@ -3,4 +3,6 @@ const TEMPRATURE_UNITS = {
     fahrenheit: "°F",
 }
 
-export { TEMPRATURE_UNITS };
+const DEFAULT_CITY = "istanbul";
+
+export { TEMPRATURE_UNITS, DEFAULT_CITY };

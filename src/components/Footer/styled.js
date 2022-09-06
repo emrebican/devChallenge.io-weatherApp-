@@ -8,8 +8,8 @@ export const Footer = styled.div`
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 1.6rem;
 
-    span {
+    a {
         font-weight: 700;
-        text-decoration: underline;
+        color: #A09FB1
     }
 `;

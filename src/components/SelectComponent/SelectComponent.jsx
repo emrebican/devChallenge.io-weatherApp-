@@ -1,12 +1,16 @@
 import * as S from './styled';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { letterCapitalize } from '../../utilities/letterCapitalize';
-import { MdKeyboardArrowRight } from 'react-icons/md';
+import { setSearchQuery } from '../../features/weatherSlice';
 
-const SelectComponent = ({ input, handleChange }) => {
+const SelectComponent = ({ input }) => {
+    const dispatch = useDispatch();
     const locations = useSelector(state => state.weather.locations);
-    console.log("loc", locations);
-    
+
+    const handleSelect = (e) => {
+        dispatch(setSearchQuery(e.target.value));
+    }
+
     const selectLocations = [...new Set(locations)].slice(0, 5).map((loc, index) => (
         <S.Option
             key={index}
@@ -17,7 +21,7 @@ const SelectComponent = ({ input, handleChange }) => {
     ))
 
     return (
-        <S.Select value={input} onChange={handleChange}>
+        <S.Select value={input} onChange={handleSelect}>
             <S.Option value="">your searches</S.Option>
             {selectLocations}
         </S.Select>

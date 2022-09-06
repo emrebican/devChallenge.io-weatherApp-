@@ -10,9 +10,7 @@ const LocationButton = () => {
         navigator.geolocation.getCurrentPosition((position) => {
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
-            console.log("lati: ", lat);
-            console.log("long: ", lon);
-            dispatch(getWeather(lat, lon))
+            dispatch(getWeather({lat, lon}))
         })
     }
 

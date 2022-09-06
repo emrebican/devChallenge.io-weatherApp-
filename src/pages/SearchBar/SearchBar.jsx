@@ -14,17 +14,15 @@ const SearchBar = () => {
     const coordinates = useSelector(state => state.weather.coordinates);
     const [input, setInput] = useState("");
 
-    console.log(coordinates);
-
-    let lat = coordinates?.lat;
-    let lon = coordinates?.lon;
+    useEffect(() => {
+        dispatch(getCoordinates(searchQuery));
+        // eslint-disable-next-line
+    }, [searchQuery])
 
     useEffect(() => {
-        // Need to be fixed**********************************************************************
-        dispatch(getCoordinates(searchQuery ? searchQuery : "Istanbul")).then(() => {
-            dispatch(getWeather(lat, lon));
-        })
-    }, [searchQuery])
+        dispatch(getWeather({ lat: coordinates.lat, lon: coordinates.lon }));
+        // eslint-disable-next-line
+    }, [coordinates])
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -59,17 +57,16 @@ const SearchBar = () => {
             </S.Form>
             <SelectComponent
                 input={input}
-                handleChange={handleChange}
             />
-            <S.CityBtn
-                onClick={() => dispatch(setSearchQuery("London"))}
-            >
-                London
-            </S.CityBtn>
             <S.CityBtn
                 onClick={() => dispatch(setSearchQuery("Istanbul"))}
             >
                 Istanbul
+            </S.CityBtn>
+            <S.CityBtn
+                onClick={() => dispatch(setSearchQuery("London"))}
+            >
+                London
             </S.CityBtn>
         </S.SearchBar_Wrapper>
     )
