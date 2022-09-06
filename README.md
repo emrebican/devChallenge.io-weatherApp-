@@ -18,9 +18,9 @@ This is a Weather app made for devchallenges.io
 <img src="/public/images/image2.png" alt="img-2">
 
 <p float="left">
-<img src="/public/images/image3.png" alt="img-2" style="height: 500px; width:400px;"/>
-<img src="/public/images/image4.png" alt="img-3" style="height: 500px; width:400px;"/>
-<img src="/public/images/image5.png" alt="img-3" style="height: 500px; width:400px;"/>
+<img src="/public/images/image3.png" alt="img-2" style="height: 600px; width:300px;"/>
+<img src="/public/images/image4.png" alt="img-3" style="height: 600px; width:300px;"/>
+<img src="/public/images/image5.png" alt="img-3" style="height: 600px; width:300px;"/>
 </p>
 
 ## This app made with [React](https://reactjs.org/) and include technologies following:
