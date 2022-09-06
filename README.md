@@ -14,13 +14,13 @@ This is a Weather app made for devchallenges.io
 
 ## ScreenShots
 
-<img src="/public/images/image1.jpg" alt="img-1">
-<img src="/public/images/image2.jpg" alt="img-2">
+<img src="/public/images/image1.png" alt="img-1">
+<img src="/public/images/image2.png" alt="img-2">
 
 <p float="left">
-<img src="/public/images/image3.jpg" alt="img-2" style="height: 600px; width:400px;"/>
-<img src="/public/images/image4.jpg" alt="img-3" style="height: 600px; width:400px;"/>
-<img src="/public/images/image5.jpg" alt="img-3" style="height: 600px; width:400px;"/>
+<img src="/public/images/image3.png" alt="img-2" style="height: 600px; width:400px;"/>
+<img src="/public/images/image4.png" alt="img-3" style="height: 600px; width:400px;"/>
+<img src="/public/images/image5.png" alt="img-3" style="height: 600px; width:400px;"/>
 </p>
 
 ## This app made with [React](https://reactjs.org/) and include technologies following:
